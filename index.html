@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Web Studio | Premium Websites for Small Businesses</title>
+    <title>BizWeb India | Premium Websites for Small Businesses</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -43,7 +43,7 @@
 
     <nav class="fixed w-full z-50 top-0 px-6 py-4">
         <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
-            <div class="text-xl font-800 tracking-tighter uppercase italic">Nexus<span class="text-violet-500">.</span></div>
+            <div class="text-xl font-800 tracking-tighter uppercase italic">BizWeb<span class="text-violet-500">.</span></div>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
                 <a href="#services" class="hover:text-white transition">Services</a>
                 <a href="#portfolio" class="hover:text-white transition">Portfolio</a>
@@ -197,7 +197,30 @@
                 Contact us on WhatsApp
             </a>
         </div>
-        <p class="mt-12 text-gray-500 text-sm">© 2026 Nexus Web Studio. Helping India grow digitally.</p>
+        <p class="mt-12 text-gray-500 text-sm">© 2026 BizWeb India. Helping India grow digitally.</p>
     </footer>
+
+    <script>
+    // Configuration
+    const whatsappNumber = "918530912184"; // Replace with your actual 10-digit number
+
+    // Function to handle plan selection
+    document.querySelectorAll('button, a').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const planName = this.parentElement.querySelector('h3')?.innerText;
+            
+            if (planName && (planName.includes("Website") || planName.includes("Plan"))) {
+                e.preventDefault();
+                
+                // Professional pre-filled message
+                const message = `Hi Nexus! 👋 I just saw your website and I'm interested in the *${planName}*. Could you share more details on how we can get started?`;
+                
+                // Encode and redirect to WhatsApp
+                const encodedMessage = encodeURIComponent(message);
+                window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+            }
+        });
+    });
+</script>
 </body>
 </html>
