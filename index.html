@@ -38,12 +38,40 @@
     .delay-1 { animation-delay: 0.2s; }
     .delay-2 { animation-delay: 0.4s; }
 </style>
+
+<style>
+   
+    
+    .nav-logo {
+  height: 56px;        /* ideal navbar size */
+  width: 52px;
+  object-fit: contain;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* subtle hover effect */
+.nav-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(123, 47, 247, 0.1));
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    height: 46px;
+    width: 46px;
+  }
+}
+
+</style>
 </head>
 <body class="selection:bg-violet-500/30">
 
     <nav class="fixed w-full z-50 top-0 px-6 py-4">
         <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
-            <div class="text-xl font-800 tracking-tighter uppercase italic">BizWeb<span class="text-violet-500">.</span></div>
+            <div > <img  src="BIzWeb_No_text_logo_1.png" alt="BizWeb Logo" class="nav-logo" >  </div>
+            
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
                 <a href="#services" class="hover:text-white transition">Services</a>
                 <a href="#portfolio" class="hover:text-white transition">Portfolio</a>
